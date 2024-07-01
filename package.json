@@ -1,0 +1,14 @@
+{
+  "name": "bomberman",
+  "version": "1.0.0",
+  "description": "bomberman game",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

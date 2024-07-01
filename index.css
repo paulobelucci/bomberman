@@ -1,0 +1,174 @@
+#game {
+  display: flex;
+  max-width: 750px;
+  max-height: 550px;
+  min-height: 550px;
+  flex-wrap: wrap;
+  min-width: 750px;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: darkgreen;
+}
+
+.concret {
+  border-radius: 3px;
+  height: 38px;
+  width: 38px;
+  background-color: gray;
+  border-top: 5px solid white;
+  border-right: 5px solid grey;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.grass {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+}
+
+.wall {
+  /* border: 2px solid red; */
+  height: 45px;
+  width: 45px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.singleBlock {
+  height: 10px;
+  align-items: stretch;
+  background-color: gray;
+  border-top: 2px solid white;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.doubleBlock {
+  display: flex;
+  justify-content: space-between;
+
+}
+.block {
+  height: 10px;
+  width: 20px;
+  background-color: gray;
+  border-top: 2px solid white;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+
+#bomberman {
+  background-image: url('./src/assets/images/bomberman.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 45px;
+  width: 45px;
+  /* border: 1px solid red; */
+
+  /* border: 1px solid red; */
+  z-index: 2;
+  
+}
+
+.bomb {
+  background-image: url('./src/assets/images/bomb.png');
+  background-size: contain;
+  height: 45px;
+  width: 45px;
+  z-index: 1;
+}
+
+.timeBomb1 {
+  filter: opacity(30%) grayscale(20%);
+  height: 45px;
+  width: 45px;
+}
+
+.timeBomb2 {
+  filter: opacity(60%) saturate(20);
+  height: 45px;
+  width: 45px;
+}
+
+.timeBomb3 {
+  filter: opacity(100%) saturate(100);
+  height: 45px;
+  width: 45px;
+}
+
+#explosionContainer {
+  display: flex;
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fireMonster {
+  height: 45px;
+  width: 45px;
+  margin: 2px;
+  background-color: orange;
+}
+.explosionBlock {
+  animation: changeSize 1s, changeColor 1s;
+}
+
+#explosion0, #explosion1, #explosion2, #explosion3 {
+  background-color: yellow;
+  height: 45px;
+  width: 45px;
+  animation: changeColor 2s running;
+}
+
+@keyframes changeColor {
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  } 
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: orange;
+  }
+}
+
+.shake {
+  animation: shake 0.1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes shake {
+  0% {margin-left: 0;}
+  25% {margin-left: 5px;}
+  50% {margin-left: 0;}
+  75% {margin-left: -5px;}
+  100% {margin-left: 0;}
+}
+
+@keyframes changeSize {
+  from {
+    height: 5px;
+    width: 5px;
+  }
+  to {
+    height: 45px;
+    width: 45px;
+  } 
+}
