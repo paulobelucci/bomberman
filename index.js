@@ -301,7 +301,7 @@ function wasInExplosionArea(object, bomb){
   addEventListener("keydown", (event) => move(event));
   createCanvas({ boardWidth: 15, boardHeigth: 11 })
   createCharacter()
-  createEnemy()
+  // createEnemy()
   setInterval(() => {
     checkExistentBombs()
   }, 100);
